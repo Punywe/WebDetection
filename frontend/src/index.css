@@ -1,1 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Mitr:wght@200;300;400;500;600;700&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Share+Tech+Mono&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 @import "tailwindcss";
+
+@theme {
+  --font-mitr: "Mitr", sans-serif;
+  --font-arimo: "Arimo", sans-serif;
+  --font-work: "Work Sans", sans-serif;
+  --font-mono-roboto: "Roboto Mono", monospace;
+  --font-tech: "Share Tech Mono", monospace;
+}
+
+@layer base {
+  body {
+    font-family: var(--font-mitr);
+  }
+}
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;  /* IE / Edge เก่า */
+    scrollbar-width: none;     /* Firefox */
+  }
+}
